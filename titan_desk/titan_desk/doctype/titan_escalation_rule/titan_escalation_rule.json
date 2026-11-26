@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "enabled",
+  "priority",
+  "trigger",
+  "keywords",
+  "temperature",
+  "hours",
+  "cb",
+  "action_assign",
+  "assign_to",
+  "action_notify",
+  "action_pause_ai",
+  "reason_label"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "default": "10",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trigger",
+   "fieldtype": "Select",
+   "label": "Trigger",
+   "options": "Keyword\nLead temperature\nNo reply for hours\nSpec complete\nAttachment received",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Small Text",
+   "label": "Keywords",
+   "description": "One per line, matched case-insensitively (Keyword trigger)",
+   "depends_on": "eval:doc.trigger==\"Keyword\""
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Select",
+   "label": "Temperature",
+   "options": "\nHot\nWarm\nCold",
+   "depends_on": "eval:doc.trigger==\"Lead temperature\""
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Int",
+   "label": "Hours",
+   "depends_on": "eval:doc.trigger==\"No reply for hours\""
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break",
+   "label": "Cb"
+  },
+  {
+   "fieldname": "action_assign",
+   "fieldtype": "Check",
+   "label": "Assign to a salesperson",
+   "default": "1"
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "User"
+  },
+  {
+   "fieldname": "action_notify",
+   "fieldtype": "Check",
+   "label": "Notify",
+   "default": "1"
+  },
+  {
+   "fieldname": "action_pause_ai",
+   "fieldtype": "Check",
+   "label": "Pause AI on the lead",
+   "default": "1"
+  },
+  {
+   "fieldname": "reason_label",
+   "fieldtype": "Data",
+   "label": "Reason shown on the lead",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Escalation Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Titan Desk Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Titan Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Titan Sales User",
+   "read": 1
+  }
+ ],
+ "sort_field": "priority",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "",
+ "autoname": "field:rule_name",
+ "naming_rule": "By fieldname"
+}
