@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "zoho_id",
+  "company",
+  "contact_name",
+  "mobile",
+  "email",
+  "lead_source",
+  "description",
+  "zoho_owner",
+  "lead_status",
+  "created_time",
+  "modified_time",
+  "desk_fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "zoho_id",
+   "fieldtype": "Data",
+   "label": "Zoho Id",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "label": "Contact Name"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "lead_source",
+   "fieldtype": "Data",
+   "label": "Lead Source",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "zoho_owner",
+   "fieldtype": "Data",
+   "label": "Zoho Owner"
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Data",
+   "label": "Lead Status"
+  },
+  {
+   "fieldname": "created_time",
+   "fieldtype": "Datetime",
+   "label": "Created Time",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "modified_time",
+   "fieldtype": "Datetime",
+   "label": "Modified Time"
+  },
+  {
+   "fieldname": "desk_fields",
+   "fieldtype": "JSON",
+   "label": "Fields pushed from the desk"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Zoho Sim Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Titan Desk Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "description": "Simulated Zoho CRM leads, used until FlowForge provides the live Zoho sync.",
+ "autoname": "field:zoho_id",
+ "naming_rule": "By fieldname"
+}

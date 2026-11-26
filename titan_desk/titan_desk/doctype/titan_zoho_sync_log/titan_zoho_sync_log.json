@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "direction",
+  "status",
+  "zoho_id",
+  "lead",
+  "fields_changed",
+  "error",
+  "attempts"
+ ],
+ "fields": [
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Pull\nPush\nImport",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Success\nFailed\nSkipped",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "zoho_id",
+   "fieldtype": "Data",
+   "label": "Zoho Id",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "fields_changed",
+   "fieldtype": "Small Text",
+   "label": "Fields Changed"
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Small Text",
+   "label": "Error"
+  },
+  {
+   "fieldname": "attempts",
+   "fieldtype": "Int",
+   "label": "Attempts",
+   "default": "1"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Zoho Sync Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Titan Desk Admin",
+   "read": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Titan Sales Manager",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "description": "",
+ "autoname": "hash"
+}

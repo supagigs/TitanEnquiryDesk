@@ -1,0 +1,249 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "business_hours_start",
+  "business_hours_end",
+  "working_days",
+  "response_target_minutes",
+  "cb1",
+  "supervised_mode",
+  "supervised_start",
+  "supervised_weeks",
+  "retention_days",
+  "followup_section",
+  "default_followup_hours",
+  "default_max_followups",
+  "zoho_section",
+  "zoho_mode",
+  "zoho_last_pull",
+  "zoho_auto_pull",
+  "whatsapp_section",
+  "whatsapp_mode",
+  "whatsapp_account",
+  "followup_message",
+  "followup_template",
+  "other_autoreply_warning",
+  "weekly_goals_section",
+  "goal_hot_calls",
+  "goal_specs_complete",
+  "goal_followups_answered"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "business_hours_start",
+   "fieldtype": "Time",
+   "label": "Business Hours Start",
+   "default": "09:00:00"
+  },
+  {
+   "fieldname": "business_hours_end",
+   "fieldtype": "Time",
+   "label": "Business Hours End",
+   "default": "19:00:00"
+  },
+  {
+   "fieldname": "working_days",
+   "fieldtype": "Data",
+   "label": "Working Days",
+   "default": "Mon,Tue,Wed,Thu,Fri,Sat",
+   "description": "Comma separated, e.g. Mon,Tue,Wed,Thu,Fri,Sat"
+  },
+  {
+   "fieldname": "response_target_minutes",
+   "fieldtype": "Int",
+   "label": "Response target (minutes)",
+   "default": "5"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break",
+   "label": "Cb1"
+  },
+  {
+   "fieldname": "supervised_mode",
+   "fieldtype": "Check",
+   "label": "Supervised mode",
+   "default": "1",
+   "description": "AI replies wait for a person to approve them"
+  },
+  {
+   "fieldname": "supervised_start",
+   "fieldtype": "Date",
+   "label": "Supervised mode started"
+  },
+  {
+   "fieldname": "supervised_weeks",
+   "fieldtype": "Int",
+   "label": "Supervised mode length (weeks)",
+   "default": "5"
+  },
+  {
+   "fieldname": "retention_days",
+   "fieldtype": "Int",
+   "label": "Keep desk logs for (days)",
+   "default": "90"
+  },
+  {
+   "fieldname": "followup_section",
+   "fieldtype": "Section Break",
+   "label": "Default follow-up cadence"
+  },
+  {
+   "fieldname": "default_followup_hours",
+   "fieldtype": "Data",
+   "label": "Follow-up intervals (hours)",
+   "default": "4,24,72,168",
+   "description": "Comma separated hours after the last outbound message"
+  },
+  {
+   "fieldname": "default_max_followups",
+   "fieldtype": "Int",
+   "label": "Max follow-ups",
+   "default": "4"
+  },
+  {
+   "fieldname": "zoho_section",
+   "fieldtype": "Section Break",
+   "label": "Zoho CRM"
+  },
+  {
+   "fieldname": "zoho_mode",
+   "fieldtype": "Select",
+   "label": "Zoho mode",
+   "options": "Simulated\nOff",
+   "default": "Simulated",
+   "description": "Live sync will be provided by FlowForge"
+  },
+  {
+   "fieldname": "zoho_last_pull",
+   "fieldtype": "Datetime",
+   "label": "Last pull",
+   "read_only": 1
+  },
+  {
+   "fieldname": "zoho_auto_pull",
+   "fieldtype": "Check",
+   "label": "Pull changes every 15 minutes",
+   "default": "1"
+  },
+  {
+   "fieldname": "whatsapp_section",
+   "fieldtype": "Section Break",
+   "label": "WhatsApp"
+  },
+  {
+   "fieldname": "whatsapp_mode",
+   "fieldtype": "Select",
+   "label": "WhatsApp mode",
+   "options": "Simulated\nLive",
+   "default": "Simulated",
+   "description": "Simulated stores messages without calling Meta (until the Meta business is verified)"
+  },
+  {
+   "fieldname": "whatsapp_account",
+   "fieldtype": "Link",
+   "label": "WhatsApp Account",
+   "options": "WhatsApp Account"
+  },
+  {
+   "fieldname": "followup_message",
+   "fieldtype": "Small Text",
+   "label": "Follow-up message",
+   "default": "Hello {first_name}, following up on your enquiry with Titan Steel & Engineers. Could you share {missing} so we can proceed?"
+  },
+  {
+   "fieldname": "followup_template",
+   "fieldtype": "Link",
+   "label": "Follow-up template (outside 24 h)",
+   "options": "WhatsApp Templates"
+  },
+  {
+   "fieldname": "other_autoreply_warning",
+   "fieldtype": "Check",
+   "label": "Another app may auto-reply",
+   "default": "0",
+   "description": "Tick if whatsapp_chat or a chatbot also replies on this number"
+  },
+  {
+   "fieldname": "weekly_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Weekly goals"
+  },
+  {
+   "fieldname": "goal_hot_calls",
+   "fieldtype": "Int",
+   "label": "Hot leads called",
+   "default": "5"
+  },
+  {
+   "fieldname": "goal_specs_complete",
+   "fieldtype": "Int",
+   "label": "Specs fully captured",
+   "default": "8"
+  },
+  {
+   "fieldname": "goal_followups_answered",
+   "fieldtype": "Int",
+   "label": "Follow-ups answered",
+   "default": "20"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Desk Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Titan Desk Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Titan Sales Manager",
+   "read": 1
+  },
+  {
+   "role": "Titan Sales User",
+   "read": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": ""
+}

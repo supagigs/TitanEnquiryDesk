@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+*.egg-info
+__pycache__
+node_modules
+titan_desk/public/frontend
+titan_desk/www/titan-desk.html
+.env

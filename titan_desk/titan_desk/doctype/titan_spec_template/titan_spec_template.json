@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_line",
+  "enabled",
+  "description",
+  "fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_line",
+   "fieldtype": "Data",
+   "label": "Product Line",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "label": "Fields to collect",
+   "options": "Titan Spec Field",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Spec Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Titan Desk Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Titan Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Titan Sales User",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "",
+ "autoname": "field:product_line",
+ "naming_rule": "By fieldname"
+}

@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 21:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fieldname",
+  "label",
+  "required",
+  "ask_order",
+  "example"
+ ],
+ "fields": [
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "label": "Fieldname",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "ask_order",
+   "fieldtype": "Int",
+   "label": "Ask Order",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "example",
+   "fieldtype": "Data",
+   "label": "Example"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-26 21:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Titan Desk",
+ "name": "Titan Spec Field",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "description": ""
+}
